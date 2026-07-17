@@ -6,6 +6,10 @@ This repository contains practical design references for three Fulcra surfaces:
 - Context Web
 - the replacement Fulcra public website
 
+It also contains paired dark- and light-mode illustration guides for product explainers, diagrams, decks, web graphics, and other visual assets.
+
+The visual token reference combines a reviewable YAML source with a generated, self-contained HTML guide for swatches, contrast, typography, spacing, radii, gradients, and depth.
+
 Each surface has two documents:
 
 - `DESIGN.md` is the actionable reference. It contains design tokens, visual rules, component behavior, accessibility requirements, and do's and don'ts for implementation and design work.
@@ -25,7 +29,18 @@ context-web/
 fulcra-website/
   DESIGN.md
   SOURCES.md
+illustration/
+  README.md
+  dark-mode.md
+  light-mode.md
+  SOURCES.md
+tokens/
+  README.md
+  SOURCES.md
+  tokens.yaml
+  index.html
 scripts/
+  build_token_reference.rb
   validate_design_md.rb
 ```
 
