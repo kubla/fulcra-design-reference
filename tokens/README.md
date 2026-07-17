@@ -1,22 +1,17 @@
 # Fulcra visual token reference
 
-The color map and visual token sheet are easier to understand as a rendered visual reference than as large Markdown tables. This folder therefore uses three complementary formats:
+The color map and visual token sheet are easier to understand as a rendered visual reference than as large Markdown tables. This folder therefore contains two complementary documents:
 
-- [`tokens.yaml`](tokens.yaml) is the compact, reviewable source of truth.
-- [`index.html`](index.html) is the generated visual reference with swatches, theme examples, contrast results, typography roles, spacing, radii, and gradients.
+- [`index.html`](index.html) is the maintained visual reference with swatches, theme examples, contrast results, typography roles, spacing, radii, and gradients.
 - [`SOURCES.md`](SOURCES.md) explains how the values and roles were determined.
 
-The HTML is self-contained: it has no framework, build dependency, external font request, tracking, or network requirement. Download or clone the repository and open `index.html` in a browser.
+The HTML is self-contained: it has no framework, generator, external font request, tracking, or network requirement. Download or clone the repository and open `index.html` in a browser.
 
-## Rebuild
+## Editing
 
-Run this from the repository root:
+Edit `index.html` directly. The maintained palette, gradients, spacing, radii, and shadows are grouped as CSS custom properties at the beginning of its style block. When changing a color, update its visible hexadecimal label and any affected contrast row in the same commit.
 
-```sh
-ruby scripts/build_token_reference.rb
-```
-
-Commit `tokens.yaml` and the regenerated `tokens/index.html` together. Do not edit the generated HTML directly.
+Keep it dependency-free and usable from the filesystem. Do not introduce a build step merely to avoid the small amount of deliberate repetition required by a visual reference.
 
 ## Scope
 

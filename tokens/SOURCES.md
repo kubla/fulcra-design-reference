@@ -1,6 +1,6 @@
 # Sources for the Fulcra visual token reference
 
-This document explains how I selected and normalized the values in `tokens.yaml` and the generated HTML reference.
+This document explains how I selected and normalized the values in the HTML reference.
 
 ## Source hierarchy
 
@@ -30,6 +30,6 @@ I retained the product preference for tonal depth and quiet borders. The compact
 
 ## Contrast
 
-The generator calculates WCAG relative luminance and contrast ratios directly from each foreground and background pair in `tokens.yaml`. The displayed pass or fail status is therefore reproducible rather than copied from prose.
+I calculated the displayed WCAG contrast ratios from the foreground and background values recorded in the HTML. The table deliberately includes failing canonical-color and decorative-divider examples beside the readable variants or usage restrictions that resolve them.
 
 Contrast results cover the core reference pairs. Real components still require testing with their actual font size, weight, opacity, gradients, imagery, hover and focus states, disabled treatment, and non-color encodings.
