@@ -7,17 +7,85 @@
   <title>Fulcra visual token reference</title>
   <style>
     :root {
-      --ink: #16161d;
-      --muted: #626a78;
+      /* Maintained Fulcra color values */
+      --color-brand-mint: #56d6b7;
+      --color-brand-violet: #7b61ff;
+      --color-brand-blue: #007aff;
+      --color-surface-dark: #000000;
+      --color-panel-dark: #16161d;
+      --color-panel-dark-raised: #222227;
+      --color-divider-dark: #38383a;
+      --color-divider-dark-strong: #333333;
+      --color-text-on-dark: #ffffff;
+      --color-text-on-dark-muted: #8a8a8e;
+      --color-surface-light: var(--color-text-on-dark);
+      --color-text-on-light: var(--color-panel-dark);
+      --color-text-on-light-muted: #626a78;
+      --color-surface-context: #e6f9f1;
+      --color-surface-agent: #e0d8fe;
+      --color-surface-info: #d8ebfe;
+      --color-divider-light: #d9dce2;
+      --color-text-mint-light: #287d69;
+      --color-text-violet-light: #6f52e5;
+      --color-text-violet-dark: #9c88ff;
+      --color-text-blue-light: #0066cc;
+      --color-text-blue-dark: #0a84ff;
+      --color-success: #34c759;
+      --color-success-text-light: #208637;
+      --color-error: #ff3b30;
+      --color-error-text-light: #d70015;
+      --color-warning: #ffcc00;
+      --color-warning-text-light: #765a00;
+
+      /* Maintained Fulcra gradients and dimensions */
+      --gradient-brand-diagonal: linear-gradient(135deg, var(--color-brand-mint) 0%, var(--color-brand-violet) 100%);
+      --gradient-brand-vertical: linear-gradient(180deg, var(--color-brand-mint) 0%, var(--color-brand-violet) 100%);
+      --gradient-brand-wash: linear-gradient(45deg, rgba(86,214,183,.10), rgba(123,97,255,.10));
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-24: 96px;
+      --radius-control: 8px;
+      --radius-card: 12px;
+      --radius-panel: 16px;
+      --radius-pill: 9999px;
+      --shadow-mobile-control: 0 4px 8px rgba(0,0,0,.24);
+      --shadow-website-floating: 0 12px 32px rgba(22,22,29,.12);
+
+      /* Reference-page aliases */
+      --color-black: var(--color-surface-dark);
+      --color-white: var(--color-text-on-dark);
+      --color-ink: var(--color-panel-dark);
+      --color-muted: var(--color-text-on-light-muted);
+      --color-dark-panel-raised: var(--color-panel-dark-raised);
+      --color-dark-divider: var(--color-divider-dark);
+      --color-dark-divider-strong: var(--color-divider-dark-strong);
+      --color-dark-muted: var(--color-text-on-dark-muted);
+      --color-light-mint: var(--color-surface-context);
+      --color-light-violet: var(--color-surface-agent);
+      --color-light-blue: var(--color-surface-info);
+      --color-light-divider: var(--color-divider-light);
+      --color-readable-mint-light: var(--color-text-mint-light);
+      --color-readable-violet-light: var(--color-text-violet-light);
+      --color-readable-violet-dark: var(--color-text-violet-dark);
+      --color-readable-blue-light: var(--color-text-blue-light);
+      --color-readable-blue-dark: var(--color-text-blue-dark);
+      --ink: var(--color-text-on-light);
+      --muted: var(--color-text-on-light-muted);
       --canvas: #f4f5f7;
-      --paper: #ffffff;
-      --line: #d9dce2;
-      --mint: #56d6b7;
-      --mint-readable: #287d69;
-      --violet: #7b61ff;
-      --violet-readable: #6f52e5;
-      --blue: #007aff;
-      --radius: 16px;
+      --paper: var(--color-white);
+      --line: var(--color-light-divider);
+      --mint: var(--color-brand-mint);
+      --mint-readable: var(--color-readable-mint-light);
+      --violet: var(--color-brand-violet);
+      --violet-readable: var(--color-readable-violet-light);
+      --blue: var(--color-brand-blue);
+      --radius: var(--radius-panel);
       --shadow: 0 12px 32px rgba(22,22,29,.08);
     }
 
@@ -138,7 +206,7 @@
     .type-card p { color: var(--muted); font-size: 14px; }
     .measure-row { display: grid; grid-template-columns: 100px 1fr 1.6fr; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid #eceef1; }
     .measure-row:last-child { border-bottom: 0; }
-    .measure-bar { height: 12px; border-radius: 999px; background: linear-gradient(90deg, var(--mint), var(--violet)); }
+    .measure-bar { width: min(100%, calc(var(--measure) * 4)); height: 12px; border-radius: 999px; background: linear-gradient(90deg, var(--mint), var(--violet)); }
     .measure-use { color: var(--muted); font-size: 13px; }
     .shape-card { padding: 22px; }
     .radius-sample { width: 100%; height: 92px; margin-bottom: 16px; background: #e0d8fe; border: 1px solid #7b61ff; }
@@ -211,7 +279,7 @@
           <div class="swatch-grid" style="margin-top: 14px">
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #56D6B7"></div>
+                <div class="swatch" style="background: var(--color-brand-mint)"></div>
                 <div class="card-copy">
                   <h3><span>Mint</span></h3>
                   <div class="token-name">--color-brand-mint</div>
@@ -221,7 +289,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #7B61FF"></div>
+                <div class="swatch" style="background: var(--color-brand-violet)"></div>
                 <div class="card-copy">
                   <h3><span>Violet</span></h3>
                   <div class="token-name">--color-brand-violet</div>
@@ -231,7 +299,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #007AFF"></div>
+                <div class="swatch" style="background: var(--color-brand-blue)"></div>
                 <div class="card-copy">
                   <h3><span>Blue</span></h3>
                   <div class="token-name">--color-brand-blue</div>
@@ -249,7 +317,7 @@
           <div class="swatch-grid" style="margin-top: 14px">
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #000000"></div>
+                <div class="swatch" style="background: var(--color-surface-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Canvas</span></h3>
                   <div class="token-name">--color-surface-dark</div>
@@ -259,7 +327,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #16161D"></div>
+                <div class="swatch" style="background: var(--color-panel-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Panel</span></h3>
                   <div class="token-name">--color-panel-dark</div>
@@ -269,7 +337,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #222227"></div>
+                <div class="swatch" style="background: var(--color-panel-dark-raised)"></div>
                 <div class="card-copy">
                   <h3><span>Raised panel</span></h3>
                   <div class="token-name">--color-panel-dark-raised</div>
@@ -279,7 +347,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #38383A"></div>
+                <div class="swatch" style="background: var(--color-divider-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Divider</span></h3>
                   <div class="token-name">--color-divider-dark</div>
@@ -289,7 +357,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #333333"></div>
+                <div class="swatch" style="background: var(--color-divider-dark-strong)"></div>
                 <div class="card-copy">
                   <h3><span>Strong divider</span></h3>
                   <div class="token-name">--color-divider-dark-strong</div>
@@ -299,7 +367,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #FFFFFF"></div>
+                <div class="swatch" style="background: var(--color-text-on-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Primary ink</span></h3>
                   <div class="token-name">--color-text-on-dark</div>
@@ -309,7 +377,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #8A8A8E"></div>
+                <div class="swatch" style="background: var(--color-text-on-dark-muted)"></div>
                 <div class="card-copy">
                   <h3><span>Secondary ink</span></h3>
                   <div class="token-name">--color-text-on-dark-muted</div>
@@ -327,7 +395,7 @@
           <div class="swatch-grid" style="margin-top: 14px">
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #FFFFFF"></div>
+                <div class="swatch" style="background: var(--color-surface-light)"></div>
                 <div class="card-copy">
                   <h3><span>Canvas</span></h3>
                   <div class="token-name">--color-surface-light</div>
@@ -337,7 +405,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #16161D"></div>
+                <div class="swatch" style="background: var(--color-text-on-light)"></div>
                 <div class="card-copy">
                   <h3><span>Primary ink</span></h3>
                   <div class="token-name">--color-text-on-light</div>
@@ -347,7 +415,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #626A78"></div>
+                <div class="swatch" style="background: var(--color-text-on-light-muted)"></div>
                 <div class="card-copy">
                   <h3><span>Secondary ink</span></h3>
                   <div class="token-name">--color-text-on-light-muted</div>
@@ -357,7 +425,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #E6F9F1"></div>
+                <div class="swatch" style="background: var(--color-surface-context)"></div>
                 <div class="card-copy">
                   <h3><span>Pale mint</span></h3>
                   <div class="token-name">--color-surface-context</div>
@@ -367,7 +435,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #E0D8FE"></div>
+                <div class="swatch" style="background: var(--color-surface-agent)"></div>
                 <div class="card-copy">
                   <h3><span>Pale violet</span></h3>
                   <div class="token-name">--color-surface-agent</div>
@@ -377,7 +445,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #D8EBFE"></div>
+                <div class="swatch" style="background: var(--color-surface-info)"></div>
                 <div class="card-copy">
                   <h3><span>Pale blue</span></h3>
                   <div class="token-name">--color-surface-info</div>
@@ -387,7 +455,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #D9DCE2"></div>
+                <div class="swatch" style="background: var(--color-divider-light)"></div>
                 <div class="card-copy">
                   <h3><span>Decorative divider</span></h3>
                   <div class="token-name">--color-divider-light</div>
@@ -405,7 +473,7 @@
           <div class="swatch-grid" style="margin-top: 14px">
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #287D69"></div>
+                <div class="swatch" style="background: var(--color-text-mint-light)"></div>
                 <div class="card-copy">
                   <h3><span>Mint on light</span></h3>
                   <div class="token-name">--color-text-mint-light</div>
@@ -415,7 +483,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #6F52E5"></div>
+                <div class="swatch" style="background: var(--color-text-violet-light)"></div>
                 <div class="card-copy">
                   <h3><span>Violet on light</span></h3>
                   <div class="token-name">--color-text-violet-light</div>
@@ -425,7 +493,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #9C88FF"></div>
+                <div class="swatch" style="background: var(--color-text-violet-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Violet on dark</span></h3>
                   <div class="token-name">--color-text-violet-dark</div>
@@ -435,7 +503,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #0066CC"></div>
+                <div class="swatch" style="background: var(--color-text-blue-light)"></div>
                 <div class="card-copy">
                   <h3><span>Blue on light</span></h3>
                   <div class="token-name">--color-text-blue-light</div>
@@ -445,7 +513,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #0A84FF"></div>
+                <div class="swatch" style="background: var(--color-text-blue-dark)"></div>
                 <div class="card-copy">
                   <h3><span>Blue on dark</span></h3>
                   <div class="token-name">--color-text-blue-dark</div>
@@ -463,7 +531,7 @@
           <div class="swatch-grid" style="margin-top: 14px">
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #34C759"></div>
+                <div class="swatch" style="background: var(--color-success)"></div>
                 <div class="card-copy">
                   <h3><span>Success fill</span></h3>
                   <div class="token-name">--color-success</div>
@@ -473,7 +541,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #208637"></div>
+                <div class="swatch" style="background: var(--color-success-text-light)"></div>
                 <div class="card-copy">
                   <h3><span>Success text on light</span></h3>
                   <div class="token-name">--color-success-text-light</div>
@@ -483,7 +551,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #FF3B30"></div>
+                <div class="swatch" style="background: var(--color-error)"></div>
                 <div class="card-copy">
                   <h3><span>Error fill</span></h3>
                   <div class="token-name">--color-error</div>
@@ -493,7 +561,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #D70015"></div>
+                <div class="swatch" style="background: var(--color-error-text-light)"></div>
                 <div class="card-copy">
                   <h3><span>Error text on light</span></h3>
                   <div class="token-name">--color-error-text-light</div>
@@ -503,7 +571,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #FFCC00"></div>
+                <div class="swatch" style="background: var(--color-warning)"></div>
                 <div class="card-copy">
                   <h3><span>Warning fill</span></h3>
                   <div class="token-name">--color-warning</div>
@@ -513,7 +581,7 @@
               </article>
 
               <article class="swatch-card">
-                <div class="swatch" style="background: #765A00"></div>
+                <div class="swatch" style="background: var(--color-warning-text-light)"></div>
                 <div class="card-copy">
                   <h3><span>Warning text on light</span></h3>
                   <div class="token-name">--color-warning-text-light</div>
@@ -562,7 +630,7 @@
       <div class="gradient-grid">
 
           <article class="gradient-card">
-            <div class="gradient-preview" style="background: linear-gradient(135deg, #56D6B7 0%, #7B61FF 100%)"></div>
+            <div class="gradient-preview" style="background: var(--gradient-brand-diagonal)"></div>
             <div class="card-copy">
               <h3>Brand diagonal</h3>
               <div class="token-name">--gradient-brand-diagonal</div>
@@ -572,7 +640,7 @@
           </article>
 
           <article class="gradient-card">
-            <div class="gradient-preview" style="background: linear-gradient(180deg, #56D6B7 0%, #7B61FF 100%)"></div>
+            <div class="gradient-preview" style="background: var(--gradient-brand-vertical)"></div>
             <div class="card-copy">
               <h3>Brand vertical</h3>
               <div class="token-name">--gradient-brand-vertical</div>
@@ -582,7 +650,7 @@
           </article>
 
           <article class="gradient-card">
-            <div class="gradient-preview" style="background: linear-gradient(45deg, rgba(86,214,183,.10), rgba(123,97,255,.10))"></div>
+            <div class="gradient-preview" style="background: var(--gradient-brand-wash)"></div>
             <div class="card-copy">
               <h3>Brand wash</h3>
               <div class="token-name">--gradient-brand-wash</div>
@@ -636,55 +704,55 @@
 
         <div class="measure-row">
           <div><strong>4px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 16%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-1)"></div>
           <div class="measure-use">Hairline-adjacent and very dense internal relationship.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>8px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 32%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-2)"></div>
           <div class="measure-use">Compact controls and repeated dense gaps.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>12px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 48%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-3)"></div>
           <div class="measure-use">Mobile card internals and compact section padding.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>16px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 64%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-4)"></div>
           <div class="measure-use">General control and card padding.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>24px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 96%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-6)"></div>
           <div class="measure-use">Major card padding and product section separation.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>32px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 100%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-8)"></div>
           <div class="measure-use">Larger group separation.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>48px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 100%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-12)"></div>
           <div class="measure-use">Website phone section interval.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>64px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 100%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-16)"></div>
           <div class="measure-use">Website tablet section interval.</div>
         </div>
 
         <div class="measure-row">
           <div><strong>96px</strong></div>
-          <div class="measure-bar" style="width: min(100%, 100%)"></div>
+          <div class="measure-bar" style="--measure: var(--space-24)"></div>
           <div class="measure-use">Website wide editorial section interval.</div>
         </div>
 
@@ -692,25 +760,25 @@
       <div class="shape-grid">
 
           <article class="shape-card">
-            <div class="radius-sample" style="border-radius: 8px"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-control)"></div>
             <h3>Compact control · 8px</h3>
             <p>Buttons, inputs, chips, and compact cards.</p>
           </article>
 
           <article class="shape-card">
-            <div class="radius-sample" style="border-radius: 12px"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-card)"></div>
             <h3>Standard card · 12px</h3>
             <p>Mobile cards, contextual web cards, and website cards.</p>
           </article>
 
           <article class="shape-card">
-            <div class="radius-sample" style="border-radius: 16px"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-panel)"></div>
             <h3>Editorial panel · 16px</h3>
             <p>Spacious website panels and product frames.</p>
           </article>
 
           <article class="shape-card">
-            <div class="radius-sample" style="border-radius: 999px"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-pill)"></div>
             <h3>Pill · 9999px</h3>
             <p>Pills, badges, and circular actions.</p>
           </article>
@@ -727,14 +795,14 @@
           </article>
 
           <article class="shape-card" style="background: #f4f5f7">
-            <div class="shadow-sample" style="box-shadow: 0 4px 8px rgba(0,0,0,.24)"></div>
+            <div class="shadow-sample" style="box-shadow: var(--shadow-mobile-control)"></div>
             <h3>Compact mobile control</h3>
             <div class="token-name">0 4px 8px rgba(0,0,0,.24)</div>
             <p>Bounded pill or search-action depth.</p>
           </article>
 
           <article class="shape-card" style="background: #f4f5f7">
-            <div class="shadow-sample" style="box-shadow: 0 12px 32px rgba(22,22,29,.12)"></div>
+            <div class="shadow-sample" style="box-shadow: var(--shadow-website-floating)"></div>
             <h3>Website floating</h3>
             <div class="token-name">0 12px 32px rgba(22,22,29,.12)</div>
             <p>Floating dialog or media only.</p>
@@ -746,17 +814,16 @@
     <section id="contrast">
       <header>
         <h2>Core contrast pairs</h2>
-        <p>Ratios are calculated from the source tokens when this HTML is generated.</p>
+        <p>Ratios are recorded for the foreground and background values shown in each row.</p>
       </header>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Pair</th><th>Preview</th><th>Foreground</th><th>Background</th><th>Ratio</th><th>Target</th><th>Result</th></tr></thead>
           <tbody>
 
-
               <tr>
                 <td>Dark primary text</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#FFFFFF"></span><span style="background:#16161D"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-white)"></span><span style="background:var(--color-ink)"></span></span></td>
                 <td><code>#FFFFFF</code></td>
                 <td><code>#16161D</code></td>
                 <td><strong>18.00:1</strong></td>
@@ -764,10 +831,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Dark secondary text</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#8A8A8E"></span><span style="background:#16161D"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-dark-muted)"></span><span style="background:var(--color-ink)"></span></span></td>
                 <td><code>#8A8A8E</code></td>
                 <td><code>#16161D</code></td>
                 <td><strong>5.23:1</strong></td>
@@ -775,10 +841,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Dark mint action</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#56D6B7"></span><span style="background:#16161D"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-brand-mint)"></span><span style="background:var(--color-ink)"></span></span></td>
                 <td><code>#56D6B7</code></td>
                 <td><code>#16161D</code></td>
                 <td><strong>10.03:1</strong></td>
@@ -786,10 +851,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Canonical violet normal text on dark</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#7B61FF"></span><span style="background:#16161D"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-brand-violet)"></span><span style="background:var(--color-ink)"></span></span></td>
                 <td><code>#7B61FF</code></td>
                 <td><code>#16161D</code></td>
                 <td><strong>4.28:1</strong></td>
@@ -797,10 +861,9 @@
                 <td><span class="badge fail">Fail</span></td>
               </tr>
 
-
               <tr>
                 <td>Readable violet text on dark</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#9C88FF"></span><span style="background:#16161D"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-readable-violet-dark)"></span><span style="background:var(--color-ink)"></span></span></td>
                 <td><code>#9C88FF</code></td>
                 <td><code>#16161D</code></td>
                 <td><strong>6.33:1</strong></td>
@@ -808,10 +871,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Light primary text</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#16161D"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-ink)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#16161D</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>18.00:1</strong></td>
@@ -819,10 +881,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Light secondary text</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#626A78"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-muted)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#626A78</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>5.45:1</strong></td>
@@ -830,10 +891,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Mint text and focus on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#287D69"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-readable-mint-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#287D69</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>4.97:1</strong></td>
@@ -841,10 +901,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Canonical violet normal text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#7B61FF"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-brand-violet)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#7B61FF</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>4.20:1</strong></td>
@@ -852,10 +911,9 @@
                 <td><span class="badge fail">Fail</span></td>
               </tr>
 
-
               <tr>
                 <td>Readable violet text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#6F52E5"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-readable-violet-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#6F52E5</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>5.23:1</strong></td>
@@ -863,10 +921,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Canonical blue normal text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#007AFF"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-brand-blue)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#007AFF</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>4.02:1</strong></td>
@@ -874,10 +931,9 @@
                 <td><span class="badge fail">Fail</span></td>
               </tr>
 
-
               <tr>
                 <td>Readable blue text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#0066CC"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-readable-blue-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#0066CC</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>5.57:1</strong></td>
@@ -885,10 +941,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Decorative light divider</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#D9DCE2"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-light-divider)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#D9DCE2</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>1.37:1</strong></td>
@@ -896,10 +951,9 @@
                 <td><span class="badge fail">Fail</span></td>
               </tr>
 
-
               <tr>
                 <td>Interactive light boundary</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#626A78"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-muted)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#626A78</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>5.45:1</strong></td>
@@ -907,10 +961,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Success text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#208637"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-success-text-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#208637</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>4.64:1</strong></td>
@@ -918,10 +971,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Error text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#D70015"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-error-text-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#D70015</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>5.38:1</strong></td>
@@ -929,10 +981,9 @@
                 <td><span class="badge pass">Pass</span></td>
               </tr>
 
-
               <tr>
                 <td>Warning text on light</td>
-                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:#765A00"></span><span style="background:#FFFFFF"></span></span></td>
+                <td><span class="pair" aria-label="Foreground and background preview"><span style="background:var(--color-warning-text-light)"></span><span style="background:var(--color-white)"></span></span></td>
                 <td><code>#765A00</code></td>
                 <td><code>#FFFFFF</code></td>
                 <td><strong>6.50:1</strong></td>
@@ -962,7 +1013,7 @@
   </main>
 
   <footer class="wrap">
-    Generated from <code>tokens/tokens.yaml</code> by <code>scripts/build_token_reference.rb</code>. No external assets or network requests.
+    Maintained directly as a self-contained HTML reference. No generator, external assets, or network requests.
   </footer>
 </body>
 </html>

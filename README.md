@@ -8,7 +8,7 @@ This repository contains practical design references for three Fulcra surfaces:
 
 It also contains paired dark- and light-mode illustration guides for product explainers, diagrams, decks, web graphics, and other visual assets.
 
-The visual token reference combines a reviewable YAML source with a generated, self-contained HTML guide for swatches, contrast, typography, spacing, radii, gradients, and depth.
+The visual token reference is a self-contained HTML guide for swatches, contrast, typography, spacing, radii, gradients, and depth. It is maintained directly and requires no build step.
 
 Each surface has two documents:
 
@@ -37,10 +37,8 @@ illustration/
 tokens/
   README.md
   SOURCES.md
-  tokens.yaml
   index.html
 scripts/
-  build_token_reference.rb
   validate_design_md.rb
 ```
 
