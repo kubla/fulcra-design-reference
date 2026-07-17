@@ -38,8 +38,6 @@ tokens/
   README.md
   SOURCES.md
   index.html
-scripts/
-  validate_design_md.rb
 ```
 
 ## Status
@@ -51,19 +49,6 @@ These references are ready for colleague review and eventual placement in a Fulc
 - Website inherits the deliberate product identity while adding explicit public, editorial, light-field, conversion, diagram, and responsive requirements.
 
 The existing Webflow website is not treated as design authority for its replacement. Its implementation may later inform content migration or regression planning, but not the visual specification where it diverges from the deliberate product system.
-
-## Validation
-
-Run the validator from the repository root:
-
-```sh
-ruby scripts/validate_design_md.rb \
-  context-mobile/DESIGN.md \
-  context-web/DESIGN.md \
-  fulcra-website/DESIGN.md
-```
-
-The validator checks YAML frontmatter, primary colors, supported dimensions, component values, token references, and the required DESIGN.md section order.
 
 ## Editing rules
 
