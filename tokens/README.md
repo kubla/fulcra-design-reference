@@ -1,6 +1,6 @@
 # Fulcra visual token reference
 
-The color map and visual token sheet are easier to understand as a rendered visual reference than as large Markdown tables. This folder therefore contains two complementary documents:
+Color maps and token sheets are easier to understand rendered than as large Markdown tables, so this folder contains two complementary documents:
 
 - [`index.html`](index.html) is the maintained visual reference with swatches, theme examples, contrast results, typography roles, spacing, radii, and gradients.
 - [`SOURCES.md`](SOURCES.md) explains how the values and roles were determined.

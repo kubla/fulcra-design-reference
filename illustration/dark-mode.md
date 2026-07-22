@@ -24,7 +24,7 @@ Build a calm instrument panel on black or near-black: one owned Fulcra context l
 - Use 1px-equivalent dividers and 1–2px-equivalent paths.
 - Use shadow only when it clarifies stacking. Prefer no shadow, a quiet border, or one soft black shadow around `0 14px 36px rgba(0,0,0,.24)`.
 - Use translucency for overlays and active cards only when the layer boundary remains visible.
-- Give system diagrams one bounded luminous context core. Color names roles and flow; it does not create an all-over cyberpunk atmosphere.
+- Give system diagrams one bounded luminous context core. Color names roles and flow; it never builds an all-over cyberpunk atmosphere. Static structure stays dark and quiet; active context glows.
 
 ## Color semantics
 
@@ -51,7 +51,7 @@ Keep every functional color tied to a legend, label, icon, line style, or establ
 
 Use `linear-gradient(135deg, #56D6B7 0%, #7B61FF 100%)` for a diagonal brand carrier, or a vertical variant for a logo-like mark. A faint card wash may use the same endpoints at roughly 8–10% opacity.
 
-Establish one dominant active path or focal system. Multiple gradient-bearing elements are acceptable when they form one coherent system; do not use gradients as wallpaper.
+Establish one dominant active path or focal system. Multiple gradient-bearing elements can coexist when they form one coherent system — but when everything glows, nothing is live. Never use gradients as wallpaper.
 
 ## Geometry and recurring devices
 

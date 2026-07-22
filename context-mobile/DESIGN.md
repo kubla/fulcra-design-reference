@@ -71,9 +71,9 @@ components:
 
 ## Overview
 
-Context Mobile is a forced-dark, native iOS personal-data instrument. It should feel calm, precise, intimate, and technically dense: an editorial Focus surface leads into stacked analytical Timeline cards, structured recording flows, notifications, and sheet-based settings/detail views.
+Context Mobile is a forced-dark, native iOS instrument for personal data. It should feel calm, precise, and intimate even at full technical density: an editorial Focus surface leads into stacked analytical Timeline cards, structured recording flows, notifications, and sheet-based settings and detail views.
 
-Black safe areas, charcoal panels, compact system type, mint normal action, violet selection, and contextual chart colors unify five icon-only tabs. Groups shares the shell but its custom dashboard composition is special-purpose and must not redefine the general app system.
+Five icon-only tabs share one vocabulary: black safe areas, charcoal panels, compact system type, mint for ordinary action, violet for selection, and contextual chart color. Groups shares the shell, but its custom dashboard composition is special-purpose and must not redefine the general app system.
 
 The YAML geometry uses `px` because the DESIGN.md alpha schema does not accept `pt`. In iOS implementation, treat one serialized design-coordinate pixel as one iOS point; Dynamic Type remains OS-managed rather than fixed to these dimensions.
 
@@ -84,22 +84,22 @@ The app uses a forced-dark presentation.
 - **Canvas (`#000000`):** Safe areas and the page field.
 - **Surface (`#17171C` approximate):** Primary app/tab/card background from `darkBackground`.
 - **Nested surface (`#212126` approximate):** A raised or inset dark surface from `fulcraBlack`.
-- **Mint (`#57D6B8` approximate):** Normal action, current/positive data, status, and inactive tab tint. The storyboard uses exact `#56D6B7`; preserve the discrepancy until deliberately normalized.
-- **Violet (`#7A61FF` approximate):** Active navigation, selected controls, time anchors, outcomes, and the brand-gradient endpoint. The storyboard uses exact `#7B61FF`.
-- **White and gray (`#FFFFFF`, approximately `#8A8A8F`):** Primary meaning and supporting metadata/axes/inactive state.
+- **Mint (`#57D6B8` approximate):** The color of ordinary action — current and positive data, status, and inactive tab tint. The storyboard uses exact `#56D6B7`; preserve the discrepancy until it is deliberately normalized.
+- **Violet (`#7A61FF` approximate):** The color of selection — active navigation, selected controls, time anchors, outcomes, and the brand-gradient endpoint. The storyboard uses exact `#7B61FF`.
+- **White and gray (`#FFFFFF`, approximately `#8A8A8F`):** Primary meaning; supporting metadata, axes, and inactive state.
 - **Contextual hues:** Blue, pink, orange, yellow, green, red, Viridis-derived colors, and domain palettes are legitimate when their meaning is labeled.
 
-Sleep uses a categorical palette: awake yellow, light/core blue, REM green, deep violet, in-bed mint, and unknown secondary gray. Do not collapse this or other charts to a universal mint/violet mapping.
+Sleep uses a categorical palette: awake yellow, light/core blue, REM green, deep violet, in-bed mint, and unknown secondary gray. Do not collapse sleep — or any chart — into a universal mint/violet mapping.
 
-Use the mint→violet gradient for identity, selected context, or transformation. Render it from top-leading to bottom-trailing.
+Reserve the mint→violet gradient for identity, selected context, and transformation, rendered from top-leading to bottom-trailing.
 
 ## Typography
 
 Use San Francisco through SwiftUI/UIKit semantic roles: `largeTitle`, `title`, `title2`, `title3`, `headline`, `subheadline`, `body`, `callout`, `footnote`, `caption`, and `caption2`. Do not register a custom brand font.
 
-Use monospaced digits for aligned metrics and time. Keep units, intervals, timestamps, and explanatory labels subordinate to their values. Large gradient statements belong to editorial Focus sections, not ordinary navigation or settings.
+Align metrics and time with monospaced digits, and keep units, intervals, timestamps, and explanatory labels subordinate to the values they describe. Large gradient statements belong to editorial Focus sections, never to ordinary navigation or settings.
 
-Dynamic Type is normative. Do not freeze the semantic styles into fixed pixel sizes. Components must reflow at enlarged and accessibility content sizes without hiding actions, values, or chart explanations.
+Dynamic Type is normative: never freeze the semantic styles into fixed pixel sizes. Components must reflow at enlarged and accessibility content sizes without hiding actions, values, or chart explanations.
 
 ## Layout
 
@@ -112,11 +112,11 @@ Respect the status bar, Dynamic Island, home indicator, keyboard, sheet, and bot
 - Use near-full-height sheets for deep detail/settings and compact native popovers for range selection.
 - Keep Record's heatmap, categories, search, configured cards, and actions in an explicit vertical order.
 
-Portrait phone layout is established. Small/large iPhone, landscape, iPad, keyboard, and accessibility-size fixtures must preserve the same hierarchy rather than mechanically scaling.
+Portrait phone layout is established. Small and large iPhones, landscape, iPad, keyboard, and accessibility-size fixtures must preserve the same hierarchy rather than scale it mechanically.
 
 ## Elevation & Depth
 
-Create hierarchy through black-to-charcoal tonal steps, restrained borders, and native sheet/material behavior. Ordinary cards should remain quiet and should not acquire heavy generic shadows.
+Hierarchy comes from black-to-charcoal tonal steps, restrained borders, and native sheet and material behavior. Ordinary cards stay quiet; they never acquire heavy generic shadows.
 
 The reusable pill/search shadow is black at 24% opacity, radius 8 points, and y offset 4 points. The gradient card uses the mint→violet wash at 18% opacity. Native materials are reserved for overlays, menus, and transitional layers.
 
@@ -132,41 +132,41 @@ Use dimmed backdrops and sheet separation for modal hierarchy. A tooling failure
 - **Hexagon:** logo, profile/avatar, or owned-context accent only.
 - **0.5-point hairline:** compact separators.
 
-Rounded rectangles are the workhorse. Do not turn every card or diagram node into a hexagon.
+The rounded rectangle is the workhorse. The hexagon belongs to identity — do not turn every card or diagram node into one.
 
 ## Components
 
 ### App shell and tabs
 
-Use five icon-only bottom destinations: Focus, Timeline, Record, Groups, and Notifications. Inactive items are mint; active items are violet with a filled or glow-like treatment. Notification count uses a red numeric badge. Supply accessible names, selected state, and badge count.
+The shell is five icon-only bottom destinations: Focus, Timeline, Record, Groups, and Notifications. Inactive items are mint; the active item turns violet with a filled or glow-like treatment. Notifications carry a red numeric badge. Every tab supplies an accessible name, selected state, and badge count.
 
 ### Cards, pills, and selections
 
-Default cards use 12 points of padding and radius on `darkBackground`. Pills use 6 horizontal/4 vertical padding with 8-point radius. Segmented controls use 6-point gaps, 20-point icons, a hairline divider, 20-point selected radius, translucent gradient/violet selection, and haptic feedback where implemented.
+Default cards use 12 points of padding and radius on `darkBackground`. Pills use 6 points of horizontal and 4 of vertical padding with an 8-point radius. Segmented controls combine 6-point gaps, 20-point icons, a hairline divider, a 20-point selected radius, translucent gradient or violet selection, and haptic feedback where implemented.
 
 ### Focus
 
-Compose the sleep summary from donut, stage durations, interval, total, efficiency, and review controls. Progressive loading must preserve geometry and dim or dash unresolved values; do not introduce an unrelated shimmer skeleton. Insight relationships use mint condition → arrow → violet outcome. Factors label red “less” and mint “more” explicitly.
+The sleep summary composes a donut, stage durations, interval, total, efficiency, and review controls. Progressive loading preserves the geometry and dims or dashes unresolved values; never substitute an unrelated shimmer skeleton. Insight relationships read mint condition → arrow → violet outcome, and factors label red “less” and mint “more” explicitly.
 
 ### Timeline and sleep
 
-Each metric card contains label/icon, mint summary, chart, and shared date ruler. No-data uses a dotted baseline; pending data uses a small centered ring. Sleep detail is a near-full-height sheet with inset summary metrics, redundant donut/bars/durations/percentages, aligned stage and heart-rate tracks, and a clear recording action.
+Each metric card stacks a label and icon, mint summary, chart, and the shared date ruler. No data leaves a dotted baseline; pending data shows a small centered ring. Sleep detail is a near-full-height sheet: inset summary metrics, a redundant donut with bars, durations, and percentages, aligned stage and heart-rate tracks, and a clear recording action.
 
 ### Record
 
-Configured cards contain title, explanatory copy, identity/reminder metadata, status, and tags. The heatmap and category palette require noncolor summaries. Search and circular actions remain separate from the card content. Destructive wording such as “Clear recent history” must receive a destructive role and confirmation even though current production shows a mint symbol.
+Configured cards carry a title, explanatory copy, identity and reminder metadata, status, and tags. The heatmap and category palette require noncolor summaries, and search and circular actions stay separate from the card content. Destructive wording such as “Clear recent history” takes a destructive role and confirmation, even though current production shows a mint symbol.
 
 ### Notifications and settings
 
-Notifications use Unread/All selection, time-group headings, insight cards, and an announced red count badge. Settings uses grouped charcoal rows, small uppercase section labels, trailing mint actions/values, status pills, native switches, and system links. Documentation imagery must redact sensitive identifiers.
+Notifications pair Unread/All selection with time-group headings, insight cards, and an announced red count badge. Settings is grouped charcoal rows: small uppercase section labels, trailing mint actions and values, status pills, native switches, and system links. Documentation imagery always redacts sensitive identifiers.
 
 ### State and accessibility contract
 
-Specify loading, empty, retry, success, offline, disabled, validation, permission, and destructive states. Preserve geometry during pending work. Honor Reduce Motion. Every custom control and chart needs an accessible name, value, state, reading order, and concise chart summary.
+Every family specifies its loading, empty, retry, success, offline, disabled, validation, permission, and destructive states. Geometry holds steady during pending work, Reduce Motion is honored, and every custom control and chart carries an accessible name, value, state, reading order, and a concise chart summary.
 
 ### Icons
 
-Use SF Symbols plus approved bundled assets. There is no runtime Font Awesome dependency. Keep icon weight coherent within a component and never rely on an icon without an accessible label when it performs an action.
+Icons are SF Symbols plus approved bundled assets; there is no runtime Font Awesome dependency. Keep icon weight coherent within a component, and never let an icon perform an action without an accessible label.
 
 ## Do's and Don'ts
 

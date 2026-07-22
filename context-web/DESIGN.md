@@ -112,31 +112,31 @@ components:
 
 ## Overview
 
-Context Web is a forced-dark analytical application with a sparse shell and an unusually dense Timeline instrument. It should feel like a personal observatory: calm, exact, inspectable, and more interested in real data than decorative dashboard conventions.
+Context Web is a forced-dark analytical application: a sparse shell wrapped around an unusually dense Timeline instrument. It should feel like a personal observatory — calm, exact, and inspectable, with real data doing the work that decoration does in ordinary dashboards.
 
-Home is comparatively spacious and brand-forward. Timeline, tables, and forms increase density while preserving the same black/charcoal surfaces, compact Rubik type, mint normal action/current data, violet selection, and restrained depth.
+Home is the spacious, brand-forward exception. Timeline, tables, and forms tighten the density, but every surface speaks the same language: black and charcoal fields, compact Rubik type, mint for ordinary action and current data, violet for selection, and restrained depth.
 
 `authz-interface` and `pool-dashboard-web` are special-purpose exception families. Their tokens and newer framework stacks do not redefine core Portal canon.
 
 ## Colors
 
-- **Mint (`#56D6B7`):** Normal action, link, current-period data, brand mark, and inactive navigation.
-- **Violet (`#7B61FF`):** Selected navigation, checked controls, tags, paired emphasis, and gradient endpoint. Use `#9C88FF` selectively when dark-field readability requires it.
-- **Canvas (`#000000`):** Page field.
+- **Mint (`#56D6B7`):** The color of ordinary action — links, current-period data, the brand mark, and inactive navigation.
+- **Violet (`#7B61FF`):** The color of selection — active navigation, checked controls, tags, paired emphasis, and the gradient endpoint. Substitute `#9C88FF` where dark-field readability demands it.
+- **Canvas (`#000000`):** The page field.
 - **Panel (`#16161D`):** Cards, tables, navigation, and modals.
-- **Raised (`#222227`):** Hover and nested/secondary surfaces.
-- **White/gray (`#FFFFFF`, `#8A8A8E`):** Primary text and metadata/axes/inactive state.
-- **Dividers (`#38383A`, `#333333`):** Navigation and stronger panel/table boundaries.
+- **Raised (`#222227`):** Hover and nested or secondary surfaces.
+- **White/gray (`#FFFFFF`, `#8A8A8E`):** Primary text; metadata, axes, and inactive state.
+- **Dividers (`#38383A`, `#333333`):** Navigation boundaries; stronger panel and table rules.
 - **Blue (`#007AFF`):** Previous period, reference, and information.
 - **Green/red/yellow:** Success, error/destructive, and warning.
 
-Use mint→violet gradients for the wordmark, selected subscription/action, and bounded brand emphasis. Do not wash ordinary panels in gradients.
+Reserve the mint→violet gradient for the wordmark, selected subscription actions, and bounded brand emphasis. When everything glows, nothing is live — never wash ordinary panels in gradient.
 
-Chart palettes are contextual. Net calories use lime, purple, and magenta; sleep uses a Viridis-derived stage palette. Current period normally uses mint and previous period blue, but this is not a universal mapping for every domain.
+Chart palettes are contextual, not universal. Net calories speak in lime, purple, and magenta; sleep uses a Viridis-derived stage palette. Mint-for-current against blue-for-previous is the usual comparison pairing, not a law that governs every domain.
 
 ## Typography
 
-Use Rubik. The application loads normal and italic weights 300–900; routine product work should concentrate on regular, medium, and semibold.
+Use Rubik. The application loads normal and italic weights 300–900, but routine product work should live in regular, medium, and semibold.
 
 - **12px label:** Metadata, axes, compact labels, and dense table/chart support.
 - **14px compact body/control:** Most controls, rows, and supporting copy.
@@ -144,15 +144,15 @@ Use Rubik. The application loads normal and italic weights 300–900; routine pr
 - **18px title:** Feature and section titles.
 - **20–24px strong title:** Page/feature emphasis used selectively.
 
-Global button type is normal weight rather than DaisyUI's default bold treatment. Preserve this restraint. Use explicit units and date ranges near values.
+Buttons set their labels at normal weight — a deliberate departure from DaisyUI's bold default. Preserve that restraint, and keep explicit units and date ranges close to the values they describe.
 
-Use tabular numerals for aligned time-series values, table columns, and compact metric comparisons. Reserve true monospace for code, identifiers, or technical values; do not use it as decorative texture.
+Align time-series values, table columns, and compact metric comparisons with tabular numerals. True monospace is for code, identifiers, and technical values, never for decorative texture.
 
 ## Layout
 
-Use a fixed 72px icon rail and top bar at 640px and above. Below 640px, replace the rail with a compact top bar and labeled full-height drawer.
+At 640px and above, the shell is a fixed 72px icon rail and top bar. Below 640px, the rail gives way to a compact top bar and a labeled full-height drawer.
 
-Use the 4px spacing basis with 2/4/6/8/12/16/24/32/40/48px values. Use 0.5px dividers for established hairline relationships.
+Spacing builds on a 4px basis — 2/4/6/8/12/16/24/32/40/48px — with 0.5px dividers for established hairline relationships.
 
 - Home may occupy a 1280px maximum container and stack summary/history modules into full-width narrow cards.
 - Timeline summary cards become a carousel on narrow screens.
@@ -162,17 +162,17 @@ Use the 4px spacing basis with 2/4/6/8/12/16/24/32/40/48px values. Use 0.5px div
 - Metric selection is a two-column centered workspace on wide screens and a bottom-anchored single-column sheet below 640px.
 - Tables may scroll, but selection, pagination, and named overflow actions must remain reachable.
 
-Preserving analytical alignment is more important than making every chart fit within 390px. Provide a discoverable scroll affordance and nonvisual alternative.
+When reflow would destroy analytical alignment, keep the alignment and let the chart scroll. Fitting every chart into 390px matters less than a discoverable scroll affordance and a nonvisual alternative.
 
 ## Elevation & Depth
 
-Use tonal layers and borders before shadow: `#000000 → #16161D → #222227`, with `#333333/#38383A` boundaries and hairline row separators. Ordinary cards, tables, and navigation are intentionally flat.
+Depth comes from tone and borders before it comes from shadow: `#000000 → #16161D → #222227`, bounded by `#333333/#38383A` borders and hairline row separators. Ordinary cards, tables, and navigation are flat on purpose.
 
-Use backdrop dimming/blur for dialogs, subscription surfaces, and tooltips. DaisyUI and third-party structures may remain visible under Fulcra overrides, but framework defaults are not design tokens.
+Backdrop dimming and blur belong to dialogs, subscription surfaces, and tooltips. DaisyUI and third-party structure may remain visible beneath Fulcra overrides, but framework defaults are not design tokens.
 
-Name semantic layers such as base, sticky navigation, dropdown, backdrop, and dialog. Do not turn isolated extreme z-index values into a token scale.
+Name semantic layers — base, sticky navigation, dropdown, backdrop, dialog — rather than promoting isolated extreme z-index values into a token scale.
 
-The custom 15px scrollbar is an existing desktop integration detail, not a general component-size rule.
+The custom 15px scrollbar is a desktop integration detail, not a general component-size rule.
 
 ## Shapes
 
@@ -184,45 +184,45 @@ The custom 15px scrollbar is an existing desktop integration detail, not a gener
 - **3px rule:** Active desktop rail indicator.
 - **Hexagon:** Profile/avatar and brand geometry only.
 
-Rounded rectangles are the workhorse. Use circles for compact actions and chart points. Do not hexagonize ordinary panels.
+The rounded rectangle is the workhorse; circles serve compact actions and chart points. The hexagon belongs to identity — do not hexagonize ordinary panels.
 
 ## Components
 
 ### Shell and navigation
 
-The wide shell uses a 72px icon rail, centered route noun, gradient Context mark, and hex profile trigger. Inactive navigation is mint; active is violet with a 3px right rule. The narrow drawer adds labels while preserving the same state colors. Supply named icon actions, visible focus, Escape close, and focus return.
+The wide shell pairs a 72px icon rail with a centered route noun, the gradient Context mark, and a hexagonal profile trigger. Inactive navigation is mint; the active item turns violet and gains a 3px right rule. The narrow drawer adds labels without changing the state colors. Icon actions are named, focus is visible, Escape closes, and focus returns.
 
 ### Buttons, links, tabs, and chips
 
-Use compact 8px-rounded controls. Mint is the default outline/text/link color, violet is selected/checked, and red is destructive. Disabled actions must visibly communicate prerequisites, as in zero-selected Share Data. Selection must include label/check/state beyond color.
+Controls are compact and 8px-rounded. Mint is the default outline, text, and link color; violet marks selected and checked; red is destructive. A disabled action must say why it is disabled — as Share Data does when nothing is selected — and selection must read beyond color, through a label, check, or state change.
 
 ### Cards and Home
 
-Cards use `#16161D` on black, 8px dominant radius, sparse shadow, and stable label/value/chart regions. Home combines a spacious brand intro with dense recent/source/history/all-time modules and equal feature tiles. Loading keeps the panel geometry and uses restrained mint rings.
+Cards sit at `#16161D` on black with the dominant 8px radius, sparse shadow, and stable label/value/chart regions. Home pairs a spacious brand introduction with dense recent, source, history, and all-time modules and equal feature tiles. Loading preserves the panel geometry behind restrained mint rings.
 
 ### Timeline
 
-The control band uses mint-outlined dataset/date/trend actions and violet Day/Week selection. Rows use label/info, aligned chart, and trend/delta zones. Current lines are mint at 1.75px with points; previous lines are blue at 1px and 0.75 opacity without points; averages use `4,4` dashes. Axes use 11px gray labels and dashed gray gridlines. Shared hover aligns a cursor and tooltips across rows.
+The control band uses mint-outlined dataset, date, and trend actions with violet Day/Week selection. Each row divides into three zones: label and info, aligned chart, trend and delta. Current-period lines are mint at 1.75px with points; previous-period lines are blue at 1px and 0.75 opacity without points; averages dash at `4,4`. Axes use 11px gray labels over dashed gray gridlines, and a shared hover aligns one cursor and its tooltips across every row.
 
-Pointer hover cannot be the only inspection method. Provide keyboard/touch selection, a concise accessible summary, and a data-table or equivalent detail path.
+Pointer hover can never be the only way in. Provide keyboard and touch selection, a concise accessible summary, and a data-table or equivalent detail path.
 
 ### Tables and forms
 
-Tables use compact headers/rows, low-contrast rules, mint links/labels, violet tags, named row selection, pagination, and circular overflow actions. Inputs use dark raised surfaces, persistent labels, mint focus/action, violet checked state, muted help, and red error. Associate error/help text programmatically.
+Tables pair compact headers and rows with low-contrast rules, mint links and labels, violet tags, named row selection, pagination, and circular overflow actions. Inputs sit on dark raised surfaces with persistent labels, mint focus and action, violet checked state, muted help text, and red errors. Error and help text are programmatically associated with their fields.
 
 ### Dialogs and drawers
 
-Use either a compact centered dialog or a large centered workspace. Below 640px, use a bottom sheet when it preserves actions and reading order. Always specify initial focus, containment, Escape/backdrop rules, and return focus.
+Use a compact centered dialog or a large centered workspace. Below 640px, a bottom sheet is right whenever it preserves the actions and reading order. Every dialog specifies its initial focus, containment, Escape and backdrop rules, and focus return.
 
 ### Loading and state system
 
-Use mint ring spinners inside stable panels. Provide distinct empty, permission-error, generic retry, toast, disabled, selected/indeterminate, destructive-confirmation, subscription, and offline states. Loading motion must have a reduced-motion treatment.
+Loading is a mint ring inside a stable panel. Beyond it, the state system needs distinct empty, permission-error, generic-retry, toast, disabled, selected/indeterminate, destructive-confirmation, subscription, and offline treatments. All loading motion has a reduced-motion counterpart.
 
 ### Icons and third-party surfaces
 
-Use Font Awesome SVG 6.6.0 with Pro Solid as the dominant product weight and Pro Thin for selected feature/empty/upload roles. Icons inherit semantic color. Every icon-only control requires a name.
+Icons are Font Awesome SVG 6.6.0 — Pro Solid as the dominant product weight, Pro Thin for selected feature, empty, and upload roles. Icons inherit semantic color, and every icon-only control carries a name.
 
-Tabulator, FilePond, Tagify, date pickers, Leaflet, Swiper, and Driver retain library structure under Fulcra theming. Specify Fulcra surfaces, type, states, focus, and accessibility; do not canonize library DOM or layer hacks.
+Tabulator, FilePond, Tagify, date pickers, Leaflet, Swiper, and Driver keep their library structure under Fulcra theming. Specify the Fulcra surfaces, type, states, focus, and accessibility; do not canonize library DOM or layer hacks.
 
 ## Do's and Don'ts
 

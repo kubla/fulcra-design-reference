@@ -152,11 +152,11 @@ components:
 
 ## Overview
 
-The replacement Fulcra website is the public, editorial expression of the deliberate Context product system. It should feel precise, calm, concrete, technically credible, and centered on user-owned context.
+The replacement Fulcra website is the public, editorial voice of the deliberate Context product system. It should feel precise, calm, concrete, and technically credible — centered, like the products themselves, on user-owned context.
 
-Use generous light or dark narrative fields around real product imagery, explicit system diagrams, proof, and clear conversion paths. The website is not a reproduction of the dense application, and it is not a restyling of the current Webflow implementation.
+Give real product imagery, explicit system diagrams, proof, and clear conversion paths generous light or dark narrative fields to live in. The website is neither a reproduction of the dense application nor a restyling of the current Webflow implementation.
 
-The central visual thesis is: many real signals and agents → one owned context layer → permissioned use. Express it through actual UI mechanics, labeled nodes, paths, scopes, timelines, and current product captures rather than generic AI imagery.
+The central visual thesis: many real signals and agents → one owned context layer → permissioned use. Express it through actual UI mechanics — labeled nodes, paths, scopes, timelines, and current product captures — never through generic AI imagery.
 
 ## Colors
 
@@ -171,13 +171,13 @@ Use the product's identity and semantic roles with a deliberate light-field adap
 - **Pale mint/violet/blue (`#E6F9F1`, `#E0D8FE`, `#D8EBFE`):** Semantic grouping for context, interpretation/agents, and information/system roles.
 - **Green/red/yellow:** Success, error/destructive, and attention. On white, normal text uses `#208637`, `#D70015`, and `#765A00`; product-bright values remain available for fills and sufficiently large/non-text marks. Pair every status with text, icon, line style, or shape.
 
-Use the mint→violet gradient for identity, transformation, selected context, or a bounded relationship. Blue may bridge the endpoints when it has an explicit role. Do not turn pale colors into ambient pastel wallpaper or gradients into generic premium decoration.
+Reserve the mint→violet gradient for identity, transformation, selected context, or a bounded relationship; blue may bridge the endpoints when it has an explicit role. Pale colors are not ambient pastel wallpaper, and gradients are not generic premium decoration.
 
 All foreground/background, focus, border, icon, and chart pairs must satisfy WCAG AA. `#D9DCE2` is a decorative separator only; interactive boundaries use at least `#626A78` or an equivalent 3:1 treatment. Core pairs are recorded in `contrast-report.md`.
 
 ## Typography
 
-Use Rubik for display headings, navigation, buttons, labels, and short product-adjacent copy. Use DM Sans for longer editorial/body copy. Use Roboto Mono only for commands, endpoints, scopes, timestamps, and metric snippets.
+Rubik carries display headings, navigation, buttons, labels, and short product-adjacent copy. DM Sans carries longer editorial body copy. Roboto Mono appears only where content is genuinely technical: commands, endpoints, scopes, timestamps, and metric snippets.
 
 The YAML values are desktop anchors. Implement responsive type with bounded fluid sizing so that display resolves around 40–48px and H1 around 36–40px on phones without truncating or forcing one-word lines.
 
@@ -202,7 +202,7 @@ Use a 4px-derived scale extended for editorial rhythm: 4, 8, 12, 16, 24, 32, 48,
 - Complex diagrams reduce label/path density instead of merely shrinking.
 - Real product captures may crop or scroll inside an honest frame, but must remain legible and explicitly labeled when composited.
 
-Use spacious narrative rhythm around concrete, denser product and diagram modules. Do not imitate Timeline density across an entire page.
+Let spacious narrative rhythm surround the concrete, denser product and diagram modules. Timeline density belongs to the product, not to an entire editorial page.
 
 ## Elevation & Depth
 
@@ -234,31 +234,31 @@ Do not hexagonize every node. Avoid generic enterprise hex grids, glass blobs, n
 
 ### Header and navigation
 
-Use concise public information architecture, an approved logo variant, one primary CTA, visible current/hover/focus states, and a labeled mobile menu. The menu must support Escape/backdrop close, focus containment while modal, and focus return.
+Keep the public information architecture concise: an approved logo variant, one primary CTA, visible current, hover, and focus states, and a labeled mobile menu. The menu supports Escape and backdrop close, contains focus while modal, and returns it afterward.
 
 ### Hero
 
-Use one declarative thesis, short explanatory copy, one primary and optional secondary CTA, plus a real product view or explicit system diagram. Avoid decorative dashboard collages.
+One declarative thesis, short explanatory copy, one primary CTA with an optional secondary, and a real product view or explicit system diagram. No decorative dashboard collages.
 
 ### Buttons and links
 
-Provide filled, outline, and text hierarchy with complete hover, focus, pressed, disabled, and loading states. Targets are at least 44px high. Identify external links. On light fields, use contrast-safe mint text/outline; do not use saturated mint for normal text when it fails contrast.
+The hierarchy is filled, outline, and text, each with complete hover, focus, pressed, disabled, and loading states. Targets are at least 44px high, and external links identify themselves. On light fields, use contrast-safe mint for text and outlines; saturated mint is off-limits for normal text wherever it fails contrast.
 
 ### Feature and product-story sections
 
-Use repeatable text + real UI/diagram compositions with source/caption. Alternate alignment only when it supports the narrative. Product imagery must show a current real UI; label crops and composites.
+Build repeatable compositions of text beside real UI or diagrams, each with a source or caption. Alternate alignment only when it serves the narrative. Product imagery shows current, real UI; crops and composites are labeled.
 
 ### Cards and proof
 
-Support standard, pale semantic, comparison/recommended, proof/testimonial, and product-preview variants. Every card has explicit content slots and hierarchy. Never invent customer proof, metrics, or attribution.
+Cards come in standard, pale semantic, comparison/recommended, proof/testimonial, and product-preview variants, each with explicit content slots and hierarchy. Never invent customer proof, metrics, or attribution.
 
 ### System diagrams
 
-Show one owned context/data core, labeled agents/sources, explicit connector direction, scopes/permissions where relevant, and a text equivalent. Preserve topology across light/dark modes; replace dark glow with whitespace and pale grouping fields on light.
+Every diagram shows one owned context or data core, labeled agents and sources, explicit connector direction, scopes and permissions where relevant, and a text equivalent. Topology survives the light/dark switch; on light fields, whitespace and pale grouping do the work that glow does on dark.
 
 ### Forms
 
-Use persistent labels, optional help, explicit required status, consent/privacy copy, inline validation, pending state, success confirmation, recoverable error, and keyboard/mobile completion. Do not use placeholder-only labels or dark patterns.
+Forms use persistent labels, optional help, explicit required status, consent and privacy copy, inline validation, a pending state, success confirmation, recoverable errors, and full keyboard and mobile completion. No placeholder-only labels; no dark patterns.
 
 ### Dialogs, banners, and consent
 
@@ -266,7 +266,7 @@ Use restrained visuals, explicit purpose, initial focus, containment, dismissal/
 
 ### Loading, error, and offline
 
-Preserve geometry during pending work. Use restrained progress, media fallback, actionable 404/500/offline/retry pages, and live-region announcements. Do not use endless decorative animation.
+Geometry holds steady during pending work. Use restrained progress, media fallbacks, actionable 404/500/offline/retry pages, and live-region announcements — never endless decorative animation.
 
 ### Footer
 
@@ -274,7 +274,7 @@ Organize product, company, platform, resources, support, and legal links with ex
 
 ### Icons, logos, and motion
 
-Choose one consistent web icon runtime family/weight for general UI; keep brand and diagram assets separate. Inherit product semantic color behavior, not a private Font Awesome dependency by default. Motion must explain relationship, state, or transition and must have a reduced-motion substitute.
+Choose one consistent icon family and weight for general UI, keeping brand and diagram assets separate. Inherit the product's semantic color behavior — not, by default, its private Font Awesome dependency. Motion explains a relationship, state, or transition, and always has a reduced-motion substitute.
 
 ## Do's and Don'ts
 
