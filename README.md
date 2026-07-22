@@ -15,7 +15,7 @@ Each surface has two documents:
 - `DESIGN.md` is the actionable reference. It contains design tokens, visual rules, component behavior, accessibility requirements, and do's and don'ts for implementation and design work.
 - `SOURCES.md` is the informative rationale. It follows the same section order and explains how the decisions were derived from product source, real interfaces, current collateral, and explicit design decisions.
 
-Keeping these documents separate allows `DESIGN.md` to remain direct and usable while preserving a reviewable explanation for future maintainers.
+The separation keeps `DESIGN.md` direct and usable while preserving a reviewable explanation for future maintainers.
 
 ## Repository structure
 
@@ -44,9 +44,9 @@ tokens/
 
 These references are ready for colleague review and eventual placement in a Fulcra company repository. They are deliberately surface-specific rather than a single cross-platform theme:
 
-- Mobile retains native iOS typography, presentation, safe-area, and accessibility behavior.
-- Web retains the Context application's dense analytical layout, responsive shell, Rubik typography, and web component semantics.
-- Website inherits the deliberate product identity while adding explicit public, editorial, light-field, conversion, diagram, and responsive requirements.
+- Mobile keeps its native iOS typography, presentation, safe-area, and accessibility behavior.
+- Web keeps the Context application's dense analytical layout, responsive shell, Rubik typography, and web component semantics.
+- The website inherits the deliberate product identity and adds explicit public requirements: editorial pages, light fields, conversion, diagrams, and responsive behavior.
 
 The existing Webflow website is not treated as design authority for its replacement. Its implementation may later inform content migration or regression planning, but not the visual specification where it diverges from the deliberate product system.
 

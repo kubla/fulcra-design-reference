@@ -7,5 +7,5 @@ These guides describe two related illustration modes:
 
 The modes share topology, semantic color roles, geometry, and the idea of Fulcra as a user-owned context layer between real-world signals and agents. They differ in material treatment: dark mode uses tonal depth and restrained luminosity; light mode uses whitespace, pale grouping fields, and dark ink.
 
-The guides are actionable references. [SOURCES.md](SOURCES.md) explains how their determinations were made.
+The guides are the actionable references; [SOURCES.md](SOURCES.md) records how their determinations were made. A diagram should survive the mode switch with the same nodes and the same meanings — only the material changes.
 
